@@ -1,0 +1,57 @@
+<button class="btn" onclick="contact_modal.showModal()">Contáctanos</button>
+<dialog id="contact_modal" #contactModal class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Contáctanos</h3>
+
+    <form class="space-y-4 mt-4" (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Nombre</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Tu nombre"
+          class="input input-bordered w-full"
+          required
+          name="name"
+        />
+      </div>
+
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="tu@email.com"
+          class="input input-bordered w-full"
+          required
+          name="email"
+        />
+      </div>
+
+      <div class="form-control">
+        <label class="label block">
+          <span class="label-text">Mensaje</span>
+        </label>
+        <textarea
+          class="textarea textarea-bordered h-full"
+          placeholder="Tu mensaje..."
+          required
+          name="message"
+        ></textarea>
+      </div>
+
+      <div class="modal-action">
+        <button type="button" class="btn" (click)="closeModal()">
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <form method="dialog" class="modal-backdrop">
+    <button (click)="closeModal()">close</button>
+  </form>
+</dialog>

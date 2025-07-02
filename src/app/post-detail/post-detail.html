@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<main class="container mx-auto px-4 py-8" *ngIf="post">
+  <article class="max-w-3xl mx-auto">
+    <span class="text-blue-600 font-medium">{{ post.category }}</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-800">{{ post.title }}</h1>
+    
+    <div class="flex items-center space-x-4 mb-6">
+      <span class="text-gray-600">{{ post.author }}</span>
+      <span class="text-gray-500 text-sm">{{ post.date | date }}</span>
+    </div>
+    
+    <img [src]="post.imageUrl" [alt]="post.title" class="w-full h-96 object-cover rounded-lg mb-8">
+    
+    <div class="prose max-w-none">
+      <p class="text-lg leading-relaxed mb-4">{{ post.content }}</p>
+      <p class="text-lg leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.</p>
+      <p class="text-lg leading-relaxed mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.</p>
+    </div>
+  </article>
+</main>
+
+<div *ngIf="!post" class="container mx-auto px-4 py-8 text-center">
+  <h2 class="text-2xl font-bold text-gray-800">Noticia no encontrada</h2>
+  <p class="text-gray-600 mt-2">La noticia que buscas no existe o ha sido eliminada.</p>
+  <a routerLink="/" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">Volver al inicio</a>
+</div>
+
+<app-footer></app-footer>
