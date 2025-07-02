@@ -28,23 +28,14 @@ Este repositorio contiene el proyecto **PaspuelOlivierLeccion2**. Aquí encontra
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/PaspuelOlivierLeccion2.git
+    git clone https://github.com/vieerr/AWD-Test2.git
     ```
 2. Ingresa al directorio del proyecto:
     ```bash
     cd PaspuelOlivierLeccion2
     ```
-3. Sigue las instrucciones específicas de instalación según el lenguaje o framework utilizado.
-
-## Uso
-
-Describe aquí cómo ejecutar o utilizar el proyecto, incluyendo ejemplos de comandos o capturas de pantalla si es necesario.
-
-## Contribución
-
-Las contribuciones son bienvenidas. Por favor, abre un _issue_ o envía un _pull request_ para sugerencias o mejoras.
+3. Instalar dependencias y ejecutar (Angular).
 
 ## Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE).
-# AWD-Test2
